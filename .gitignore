@@ -1,0 +1,30 @@
+# Build folders
+dist
+
+# Config files
+.npmrc
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Certificates
+*.crt
+*.pem
+
+# Editor
+.DS_Store
+*.swp
+.idea
+.vscode
+
+# Dependency directory
+node_modules
+
+# TypeScript
+*.tsbuildinfo

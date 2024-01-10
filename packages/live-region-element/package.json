@@ -1,0 +1,37 @@
+{
+  "name": "live-region-element",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "dist/index.d.ts",
+      "default": "dist/index.js"
+    },
+    "./define": {
+      "types": "dist/define.d.ts",
+      "default": "dist/define.js"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:ts && npm run build:js",
+    "build:js": "rollup -c",
+    "build:types": "tsc -b",
+    "clean": "rimraf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "@lit-labs/ssr-dom-shim": "^1.1.2",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.9.4",
+    "rollup-plugin-esbuild": "^6.1.0"
+  },
+  "sideEffects": [
+    "./src/define.ts",
+    "./dist/define.js"
+  ]
+}
