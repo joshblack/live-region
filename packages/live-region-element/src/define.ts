@@ -1,4 +1,4 @@
-import { customElements } from "@lit-labs/ssr-dom-shim";
-import { LiveRegionElement } from "./element";
+import { customElements } from '@lit-labs/ssr-dom-shim';
+import { LiveRegionElement } from './element';
 
-customElements.define("live-region", LiveRegionElement);
+customElements.define('live-region', LiveRegionElement);

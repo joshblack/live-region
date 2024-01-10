@@ -1,1 +1,1 @@
-export { LiveRegionElement } from "./element";
+export { LiveRegionElement } from './element';

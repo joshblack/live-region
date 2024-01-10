@@ -4,13 +4,17 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "npm run build -ws --if-present",
+    "clean": "npm run clean -ws --if-present",
+    "format": "prettier --cache --write '**/*.{js,md,mdx,ts,tsx,yml}'",
+    "format:diff": "prettier --cache --list-different '**/*.{js,md,mdx,ts,tsx,yml}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "type-check": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.1.1",
     "typescript": "^5.3.3"
   }
 }

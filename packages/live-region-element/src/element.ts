@@ -1,4 +1,4 @@
-import { HTMLElement } from "@lit-labs/ssr-dom-shim";
+import { HTMLElement } from '@lit-labs/ssr-dom-shim';
 
 let template: HTMLTemplateElement | null = null;
 
@@ -6,7 +6,7 @@ function getTemplate() {
   if (template) {
     return template;
   }
-  template = document.createElement("template");
+  template = document.createElement('template');
   template.innerHTML = `
     <style>
       :host {
@@ -25,7 +25,7 @@ function getTemplate() {
 }
 
 export type AnnounceOptions = {
-  politeness?: "polite" | "assertive";
+  politeness?: 'polite' | 'assertive';
 };
 
 export class LiveRegionElement extends HTMLElement {
@@ -33,13 +33,13 @@ export class LiveRegionElement extends HTMLElement {
     super();
     if (!this.shadowRoot) {
       const template = getTemplate();
-      const shadowRoot = this.attachShadow({ mode: "open" });
+      const shadowRoot = this.attachShadow({ mode: 'open' });
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
   }
 
   announce(message: string, options: AnnounceOptions = {}) {
-    const { politeness = "polite" } = options;
+    const { politeness = 'polite' } = options;
     const container = this.shadowRoot?.getElementById(politeness);
     if (!container) {
       // TODO: warn shadow dom corrupted

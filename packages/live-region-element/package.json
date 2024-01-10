@@ -5,12 +5,12 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "dist/index.d.ts",
-      "default": "dist/index.js"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
     "./define": {
-      "types": "dist/define.d.ts",
-      "default": "dist/define.js"
+      "types": "./dist/define.d.ts",
+      "default": "./dist/define.js"
     }
   },
   "scripts": {
@@ -24,6 +24,7 @@
     "dist",
     "src"
   ],
+  "license": "MIT",
   "devDependencies": {
     "@lit-labs/ssr-dom-shim": "^1.1.2",
     "rimraf": "^5.0.5",
