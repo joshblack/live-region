@@ -1,7 +1,8 @@
 {
   "name": "live-region",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "scripts": {
     "build": "npm run build -ws --if-present",

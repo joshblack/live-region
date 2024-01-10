@@ -1,1 +1,1 @@
-export { LiveRegionElement } from './element';
+export { LiveRegionElement, templateContent } from './element';

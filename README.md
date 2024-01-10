@@ -2,9 +2,11 @@
 
 ## Packages
 
-| Package                                                 | Description |
-| :------------------------------------------------------ | :---------- |
-| [`live-region-element`](./packages/live-region-element) |             |
+| Package                                                             | Description |
+| :------------------------------------------------------------------ | :---------- |
+| [`live-region-element`](./packages/live-region-element)             |             |
+| [`react-live-region-element`](./packages/react-live-region-element) |             |
+| [`react-base-dialog`](./packages/react-base-dialog)                 |             |
 
 ## 🙌 Contributing
 

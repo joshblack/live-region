@@ -1,26 +1,26 @@
-import { HTMLElement } from '@lit-labs/ssr-dom-shim';
-
 let template: HTMLTemplateElement | null = null;
+
+const templateContent = `
+<style>
+:host {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+</style>
+<div id="polite" aria-live="polite" aria-atomic="true"></div>
+<div id="assertive" aria-live="assertive" aria-atomic="true"></div>
+`;
 
 function getTemplate() {
   if (template) {
     return template;
   }
   template = document.createElement('template');
-  template.innerHTML = `
-    <style>
-      :host {
-        clip-path: inset(50%);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-      }
-    </style>
-    <div id="polite" aria-live="polite" aria-atomic="true"></div>
-    <div id="assertive" aria-live="assertive" aria-atomic="true"></div>
-  `;
+  template.innerHTML = templateContent;
   return template;
 }
 
@@ -28,7 +28,7 @@ export type AnnounceOptions = {
   politeness?: 'polite' | 'assertive';
 };
 
-export class LiveRegionElement extends HTMLElement {
+class LiveRegionElement extends HTMLElement {
   constructor() {
     super();
     if (!this.shadowRoot) {
@@ -38,7 +38,7 @@ export class LiveRegionElement extends HTMLElement {
     }
   }
 
-  announce(message: string, options: AnnounceOptions = {}) {
+  public announce(message: string, options: AnnounceOptions = {}) {
     const { politeness = 'polite' } = options;
     const container = this.shadowRoot?.getElementById(politeness);
     if (!container) {
@@ -52,4 +52,15 @@ export class LiveRegionElement extends HTMLElement {
       container.textContent = message;
     }
   }
+
+  public announceFromElement(
+    element: HTMLElement,
+    options: AnnounceOptions = {},
+  ) {
+    if (element.textContent) {
+      this.announce(element.textContent, options);
+    }
+  }
 }
+
+export { LiveRegionElement, templateContent };

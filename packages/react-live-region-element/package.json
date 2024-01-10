@@ -1,18 +1,12 @@
 {
-  "name": "live-region-element",
+  "name": "react-live-region-element",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "node": "./dist/node/index.js",
       "default": "./dist/index.js"
-    },
-    "./define": {
-      "types": "./dist/define.d.ts",
-      "node": "./dist/node/define.js",
-      "default": "./dist/define.js"
     }
   },
   "scripts": {
@@ -27,17 +21,25 @@
     "src"
   ],
   "license": "MIT",
+  "peerDependencies": {
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "live-region-element": "^0.0.0"
+  },
   "devDependencies": {
-    "@lit-labs/ssr-dom-shim": "^1.1.2",
-    "@rollup/plugin-inject": "^5.0.5",
-    "@rollup/plugin-replace": "^5.0.5",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "magic-string": "^0.30.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.9.4",
     "rollup-plugin-esbuild": "^6.1.0",
     "typescript": "^5.3.3"
   },
-  "sideEffects": [
-    "./src/define.ts",
-    "./dist/define.js"
-  ]
+  "sideEffects": ["./src/index.tsx", "./dist/index.js"]
 }
