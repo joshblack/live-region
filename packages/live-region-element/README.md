@@ -20,11 +20,6 @@ yarn add live-region-element
 
 ## Usage
 
-## 📚 Examples
-
-If you're looking for more examples on how to use `live-region-element`, we have some
-examples that you can check out:
-
 ## 🙌 Contributing
 
 We're always looking for contributors to help us fix bugs, build new features,
