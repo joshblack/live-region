@@ -38,12 +38,11 @@ class LiveRegionElement extends HTMLElement {
     }
   }
 
-  public announce(message: string, options: AnnounceOptions = {}) {
+  announce(message: string, options: AnnounceOptions = {}) {
     const { politeness = 'polite' } = options;
     const container = this.shadowRoot?.getElementById(politeness);
     if (!container) {
-      // TODO: warn shadow dom corrupted
-      return;
+      throw new Error('Unable to find container for message');
     }
 
     if (container.textContent === message) {
@@ -53,13 +52,18 @@ class LiveRegionElement extends HTMLElement {
     }
   }
 
-  public announceFromElement(
-    element: HTMLElement,
-    options: AnnounceOptions = {},
-  ) {
+  announceFromElement(element: HTMLElement, options: AnnounceOptions = {}) {
     if (element.textContent) {
       this.announce(element.textContent, options);
     }
+  }
+
+  getMessage(politeness: 'polite' | 'assertive' = 'polite') {
+    const container = this.shadowRoot?.getElementById(politeness);
+    if (!container) {
+      throw new Error('Unable to find container for politeness message');
+    }
+    return container.textContent;
   }
 }
 

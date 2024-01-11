@@ -1,6 +1,7 @@
 import inject from '@rollup/plugin-inject';
 import replace from '@rollup/plugin-replace';
 import esbuild from 'rollup-plugin-esbuild';
+import typescript from 'rollup-plugin-typescript2';
 
 /**
  * @type {import('rollup').RollupOptions}
@@ -9,7 +10,7 @@ const config = [
   {
     input: ['./src/index.ts', './src/define.ts'],
     external: ['@lit-labs/ssr-dom-shim'],
-    plugins: [esbuild()],
+    plugins: [typescript({ tsconfig: 'tsconfig.build.json' }), esbuild()],
     output: {
       dir: './dist',
       format: 'esm',

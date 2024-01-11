@@ -19,11 +19,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'yarn'
       - name: Install dependencies
-        run: npm ci
-      - name: Check file formatting
-        run: npm run format:diff
+        run: yarn install --immutable
+        run: yarn format:diff
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Run tests
+        run: yarn test
 
   type-check:
     runs-on: ubuntu-latest
@@ -34,8 +48,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'yarn'
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --immutable
       - name: Run TypeScript
-        run: npm run type-check
+        run: yarn type-check

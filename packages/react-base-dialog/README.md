@@ -1,29 +1,24 @@
-# live-region-element
+# react-base-dialog
 
 > A custom element for accessible live region announcements
 
 ## Getting Started
 
-To install `live-region-element` in your project, you will need to run the following
+To install `react-base-dialog` in your project, you will need to run the following
 command using [npm](https://www.npmjs.com/):
 
 ```bash
-npm install -S live-region-element
+npm install -S react-base-dialog
 ```
 
 If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
 instead:
 
 ```bash
-yarn add live-region-element
+yarn add react-base-dialog
 ```
 
 ## Usage
-
-## 📚 Examples
-
-If you're looking for more examples on how to use `live-region-element`, we have some
-examples that you can check out:
 
 ## 🙌 Contributing
 
