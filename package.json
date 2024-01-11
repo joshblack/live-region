@@ -8,7 +8,7 @@
     "www"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach -A --exclude www --exclude 'example-*' --exclude live-region run build",
+    "build": "yarn workspaces foreach -Apt --exclude www --exclude 'example-*' --exclude live-region run build",
     "clean": "yarn workspaces foreach -Ap run clean",
     "format": "prettier --cache --write '**/*.{js,md,mdx,ts,tsx,yml}'",
     "format:diff": "prettier --cache --list-different '**/*.{js,md,mdx,ts,tsx,yml}'",
