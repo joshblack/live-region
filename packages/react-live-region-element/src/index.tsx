@@ -4,7 +4,7 @@ import { LiveRegionElement, templateContent } from 'live-region-element';
 import 'live-region-element/define';
 import * as React from 'react';
 
-type LiveRegionProps = React.PropsWithChildren<{}>;
+type LiveRegionProps = React.PropsWithChildren;
 
 function LiveRegion({ children }: LiveRegionProps) {
   const [liveRegion, setLiveRegion] = React.useState<LiveRegionElement | null>(
@@ -34,7 +34,7 @@ function LiveRegionOutlet() {
     <live-region ref={setLiveRegion} suppressHydrationWarning>
       {canUseDOM ? null : (
         <template
-          // @ts-ignore shadowrootmode does exist on `template`
+          // @ts-expect-error shadowrootmode does exist on `template`
           shadowrootmode="open"
           dangerouslySetInnerHTML={innerHTML}
         />
