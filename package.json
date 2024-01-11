@@ -13,7 +13,7 @@
     "format:diff": "prettier --cache --list-different '**/*.{js,md,mdx,ts,tsx,yml}'",
     "lint": "eslint .",
     "test": "vitest",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit && yarn workspaces foreach -Ap run type-check"
   },
   "license": "MIT",
   "devDependencies": {

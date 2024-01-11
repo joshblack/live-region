@@ -37,7 +37,7 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Build dependencies
+      - name: Build project
         run: yarn build
       - name: Run tests
         run: yarn test
@@ -54,5 +54,7 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Build project
+        run: yarn build
       - name: Run TypeScript
         run: yarn type-check
