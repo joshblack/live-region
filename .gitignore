@@ -29,6 +29,9 @@ node_modules
 # TypeScript
 *.tsbuildinfo
 
+# Next.js
+.next
+
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 .yarn/*
 !.yarn/cache
