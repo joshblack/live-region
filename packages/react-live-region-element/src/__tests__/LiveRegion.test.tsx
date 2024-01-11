@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import * as React from 'react';
-import { describe, expect, test } from 'vitest';
-import { LiveRegion, LiveRegionOutlet, useLiveRegion } from '../';
+import { describe, test } from 'vitest';
+import { LiveRegion, LiveRegionOutlet } from '../';
 
 describe('LiveRegion', () => {
   test('hello', () => {
