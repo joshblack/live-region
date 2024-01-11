@@ -4,10 +4,11 @@
   "workspaces": [
     "packages/*",
     "examples/*",
-    "packages/*/examples/*"
+    "packages/*/examples/*",
+    "www"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach -Apt --exclude 'example-*' run build",
+    "build": "yarn workspaces foreach -Apt --exclude www --exclude 'example-*' --exclude live-region run build",
     "clean": "yarn workspaces foreach -Ap run clean",
     "format": "prettier --cache --write '**/*.{js,md,mdx,ts,tsx,yml}'",
     "format:diff": "prettier --cache --list-different '**/*.{js,md,mdx,ts,tsx,yml}'",
