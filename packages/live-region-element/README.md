@@ -25,7 +25,7 @@ The `live-region-element` package provides two entrypoints for you to use:
 - `live-region-element` which exports the `LiveRegionElement` custom element,
   along with types, for you to use and register manually
 - `live-region-element/define` which will register the `LiveRegionElement` as
-`live-region` which can be used directly in your HTML
+  `live-region` which can be used directly in your HTML
 
 The `<live-region>` element supports two methods: `announce()` and
 `announceFromElement`().
