@@ -1,6 +1,6 @@
 {
   "name": "example-nextjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,9 +12,9 @@
   "dependencies": {
     "next": "14.0.4",
     "react": "^18",
-    "react-base-dialog": "^0.0.0",
+    "react-base-dialog": "^0.0.1",
     "react-dom": "^18",
-    "react-live-region-element": "^0.0.0"
+    "react-live-region-element": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
