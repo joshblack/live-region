@@ -1,6 +1,6 @@
 {
   "name": "react-base-dialog",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "exports": {
@@ -27,7 +27,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "react-live-region-element": "^0.0.0"
+    "react-live-region-element": "^0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.47",
